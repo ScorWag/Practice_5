@@ -65,16 +65,6 @@ public class SQRServiceTest {
     }
 
     @Test
-    public void reservedValues() {
-        SQRService service = new SQRService();
-
-        int actual = service.calculateSqr(300, 200);
-        int expected = 87;
-
-        Assertions.assertEquals(expected, actual);
-    }
-
-    @Test
     public void rangeWithMinusValues() {
         SQRService service = new SQRService();
 
@@ -83,15 +73,4 @@ public class SQRServiceTest {
 
         Assertions.assertEquals(expected, actual);
     }
-
-    @Test
-    public void uncorrectExpectedResult() {
-        SQRService service = new SQRService();
-
-        int actual = service.calculateSqr(150, 750);
-        int expected = 0;
-
-        Assertions.assertEquals(expected, actual);
-    }
-
 }
